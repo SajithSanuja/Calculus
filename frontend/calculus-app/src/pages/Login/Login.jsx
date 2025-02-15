@@ -28,6 +28,7 @@ export const Login = () => {
               component="span" 
               className="create-account-link"
               onClick={handleCreateAccount}
+              style={{ cursor: 'pointer' }}
             >
               Create a free account
             </Typography>

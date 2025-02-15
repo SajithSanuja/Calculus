@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Login } from './pages/Login/Login';
 import { SignIn } from './pages/SignIn/SignIn';
 
-function App() {
+export const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -12,6 +12,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
 
