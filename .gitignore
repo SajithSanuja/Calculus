@@ -1,0 +1,42 @@
+# Dependencies
+frontend/calculus-app/node_modules
+frontend/calculus-app/.pnp
+frontend/calculus-app/.pnp.js
+
+# Testing
+frontend/calculus-app/coverage
+
+# Production
+frontend/calculus-app/build
+frontend/calculus-app/dist
+
+# Environment files
+frontend/calculus-app/.env
+frontend/calculus-app/.env.local
+frontend/calculus-app/.env.development.local
+frontend/calculus-app/.env.test.local
+frontend/calculus-app/.env.production.local
+
+# Logs
+frontend/calculus-app/npm-debug.log*
+frontend/calculus-app/yarn-debug.log*
+frontend/calculus-app/yarn-error.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db 
