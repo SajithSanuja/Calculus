@@ -18,14 +18,14 @@ export const LeaderboardPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const allPlayers = [
-    { rank: 1, name: 'Alex Smith', points: 89, playerId: 'AS001' },
-    { rank: 2, name: 'Maria Garcia', points: 76, playerId: 'MG002' },
-    { rank: 3, name: 'John Doe', points: 90, playerId: 'JD003' },
-    { rank: 4, name: 'Emma Wilson', points: 72, playerId: 'EW004' },
-    { rank: 5, name: 'James Brown', points: 68, playerId: 'JB005' },
-    { rank: 6, name: 'Sofia Chen', points: 65, playerId: 'SC006' },
-    { rank: 7, name: 'Lucas Kim', points: 60, playerId: 'LK007' },
-    { rank: 8, name: 'Sajith Sanuja', points: 35, playerId: 'SS008' }
+    { rank: 1, name: 'Sajith Sanuja', points: 89, playerId: 'SS001' },
+    { rank: 2, name: 'Thamiru Yasith', points: 76, playerId: 'TY002' },
+    { rank: 3, name: 'Nenuka Nugawela', points: 90, playerId: 'NN003' },
+    { rank: 4, name: 'Sudeera Dilshan', points: 72, playerId: 'SD004' },
+    { rank: 5, name: 'Sachini Fernando', points: 68, playerId: 'SF005' },
+    { rank: 6, name: 'Sanduni', points: 65, playerId: 'SC006' },
+    { rank: 7, name: 'Thathsara', points: 60, playerId: 'TK007' },
+    { rank: 8, name: 'Chameera Fernando', points: 35, playerId: 'CF008' }
   ];
 
   const filteredPlayers = allPlayers.filter(player => 

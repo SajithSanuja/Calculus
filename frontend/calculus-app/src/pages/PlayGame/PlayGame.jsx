@@ -9,24 +9,24 @@ import { useNavigate } from 'react-router-dom';
 import { GameResultModal } from '../../components/GameResultModal/GameResultModal';
 
 export const PlayGame = () => {
-  const [gameData, setGameData] = useState(null); // Stores game data (image URL and solution)
-  const [answer, setAnswer] = useState(''); // Stores the user's answer
-  const [timeLeft, setTimeLeft] = useState(35); // 35 seconds timer
-  const [isLoading, setIsLoading] = useState(true); // Tracks loading state
+  const [gameData, setGameData] = useState(null); 
+  const [answer, setAnswer] = useState(''); 
+  const [timeLeft, setTimeLeft] = useState(35); 
+  const [isLoading, setIsLoading] = useState(true); 
   const [showModal, setShowModal] = useState(false);
   const [gameResult, setGameResult] = useState(null);
   const navigate = useNavigate();
 
-  const isFetched = useRef(false); // Tracks if API was already called
+  const isFetched = useRef(false); 
 
-  // Fetch game data
+  
   const fetchNewGame = useCallback(async () => {
     setIsLoading(true);
     try {
       const response = await fetch('https://marcconrad.com/uob/banana/api.php?out=json&base64=yes');
       const data = await response.json();
 
-      // Convert base64 string to an image URL
+      
       const imageView = `data:image/png;base64,${data.question}`;
 
       setGameData({
@@ -40,15 +40,15 @@ export const PlayGame = () => {
     }
   }, []);
 
-  // Initialize game data only once
+  
   useEffect(() => {
     if (!isFetched.current) {
       fetchNewGame();
-      isFetched.current = true; // Prevent multiple API calls
+      isFetched.current = true; 
     }
   }, [fetchNewGame]);
 
-  // Handle user submission
+  
   const handleSubmit = async () => {
     if (gameData && answer.trim()) {
       const isCorrect = parseInt(answer) === gameData.solution;
@@ -57,19 +57,19 @@ export const PlayGame = () => {
     }
   };
 
-  // Add these handlers
+  
   const handleNext = async () => {
     setShowModal(false);
     await fetchNewGame();
     setAnswer('');
-    setTimeLeft(60); // Reset timer
+    setTimeLeft(60);
   };
 
   const handleExit = () => {
     navigate('/dashboard');
   };
 
-  // Add timeout handler
+  
   useEffect(() => {
     if (timeLeft === 0) {
       setGameResult('timeout');
@@ -79,27 +79,25 @@ export const PlayGame = () => {
 
   return (
     <div className="play-game-page">
-      {/* Header Component */}
+  
       <Header title="Play Game" userName="Sajith Sanuja" />
       
       <div className="play-game-content">
         <Box className="game-container">
-          {/* Game Header */}
+          
           <Box className="game-header">
             <Typography variant="h6" className="random-number">
               Random Number: 
             </Typography>
-            {/* Timer Component */}
+            
             <Timer timeLeft={timeLeft} setTimeLeft={setTimeLeft} />
           </Box>
 
-          {/* GameBoard Component */}
           <GameBoard 
             imageView={gameData?.question} 
             isLoading={isLoading}
           />
 
-          {/* Answer Section */}
           <Box className="answer-section">
             <Typography variant="h6" className="answer-label">
               Answer:
@@ -125,7 +123,7 @@ export const PlayGame = () => {
       <GameResultModal 
         isOpen={showModal}
         result={gameResult}
-        points={1}  // Always deduct/add 1 point for any result
+        points={1}  
         onNext={handleNext}
         onExit={handleExit}
       />

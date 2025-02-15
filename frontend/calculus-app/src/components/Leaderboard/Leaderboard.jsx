@@ -7,10 +7,10 @@ import './Leaderboard.css';
 export const Leaderboard = () => {
   const navigate = useNavigate();
   const players = [
-    { rank: 1, name: 'Alex Smith', points: 89 },
-    { rank: 2, name: 'Maria Garcia', points: 76 },
-    { rank: 3, name: 'John Doe', points: 90 },
-    { rank: 8, name: 'Sajith Sanuja', points: 35 }
+    { rank: 1, name: 'Thamiru', points: 89 },
+    { rank: 2, name: 'Thilina', points: 76 },
+    { rank: 3, name: 'Nenuka', points: 90 },
+    { rank: 8, name: 'Sajith', points: 35 }
   ];
 
   return (

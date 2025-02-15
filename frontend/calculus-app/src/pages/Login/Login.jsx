@@ -24,7 +24,7 @@ export const Login = () => {
         exit={{ x: "-100%" }}
         transition={{ 
           duration: 0.3,
-          ease: [0.43, 0.13, 0.23, 0.96] // Custom easing for smoother animation
+          ease: [0.43, 0.13, 0.23, 0.96] 
         }}
       >
         <Box className="login-box">

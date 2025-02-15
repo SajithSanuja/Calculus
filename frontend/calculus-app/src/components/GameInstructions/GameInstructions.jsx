@@ -27,7 +27,8 @@ export const GameInstructions = () => {
           Example:
         </Typography>
         <Box className="example-content">
-          <Typography variant="body2">• Number: 1256</Typography>
+          <Typography variant="body2">• Random Number: 1256</Typography>
+          <Typography variant="body2">• Dicovered Solution: 2</Typography>
           <Typography variant="body2">• Operation: 1256 ÷ 2 = 628</Typography>
           <Typography variant="body2">• Result: 268 (ascending order)</Typography>
         </Box>

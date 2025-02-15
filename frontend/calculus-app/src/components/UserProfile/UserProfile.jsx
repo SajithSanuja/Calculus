@@ -13,7 +13,7 @@ export const UserProfile = ({ name, points, email, nickname }) => {
         <Avatar 
           className="profile-avatar"
           alt={nickname || name}
-          src="/path-to-profile-pic.jpg"  // You can add actual image path here
+          src="/path-to-profile-pic.jpg"  
         >
           {(nickname || name)[0]}  {/* Shows first letter if no image */}
         </Avatar>

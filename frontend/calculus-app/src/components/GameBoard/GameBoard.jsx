@@ -3,10 +3,10 @@ import { Box, CircularProgress } from '@mui/material';
 import './GameBoard.css';
 
 export const GameBoard = ({ imageView, isLoading }) => {
-  // Add error handling for image loading
+  
   const handleImageError = (e) => {
     console.error('Error loading image:', e);
-    e.target.style.display = 'none'; // Hide broken image
+    e.target.style.display = 'none'; 
   };
 
   return (
@@ -22,7 +22,7 @@ export const GameBoard = ({ imageView, isLoading }) => {
             alt="Game Board" 
             className="game-image"
             onError={handleImageError}
-            crossOrigin="anonymous"  // Add this to handle CORS
+            crossOrigin="anonymous"  
           />
         )
       )}

@@ -2,7 +2,7 @@
   min-height: 100vh;
   background-color: #f8f9fa;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden; 
 }
 
 .dashboard-content {
@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 
-/* Medium screens */
+
 @media (min-width: 768px) {
   .dashboard-content {
     padding: 1.5rem;
@@ -34,7 +34,7 @@
   }
 }
 
-/* Small screens */
+
 @media (max-width: 480px) {
   .dashboard-content {
     padding: 0.5rem;

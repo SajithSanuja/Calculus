@@ -24,13 +24,13 @@
   }
 }
 
-/* Small screens */
+
 @media (max-width: 480px) {
   .header-title {
     font-size: 1.5rem !important;
   }
   
   .header-profile .MuiTypography-root {
-    display: none; /* Hide name on very small screens */
+    display: none; 
   }
 } 

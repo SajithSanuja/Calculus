@@ -64,7 +64,6 @@
   }
 }
 
-/* Small screens */
 @media (max-width: 480px) {
   .profile-card {
     padding: 1rem;

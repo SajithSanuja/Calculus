@@ -1,4 +1,4 @@
-/* Desktop and tablet layout (above 415px) */
+
 .signin-container {
   display: flex;
   height: 100vh;
@@ -84,7 +84,7 @@
   cursor: pointer;
 }
 
-/* Add this new media query after your desktop styles and before the mobile styles */
+
 @media screen and (min-width: 901px) and (max-width: 1179px) {
   .main-title {
     font-size: 1.9rem !important;
@@ -93,7 +93,7 @@
   }
 }
 
-/* Mobile layout (415px and below) */
+
 @media screen and (max-width: 900px) {
   .signin-container {
     position: relative;
