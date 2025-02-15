@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1e2a38;
+  color: white;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+  
+  .header-profile {
+    gap: 1rem;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .header-profile .MuiTypography-root {
+    display: none; /* Hide name on very small screens */
+  }
+} 

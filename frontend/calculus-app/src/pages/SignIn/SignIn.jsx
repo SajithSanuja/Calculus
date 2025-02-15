@@ -3,6 +3,7 @@ import { TextField, Button, Box, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "./SignIn.css";
 import { assets } from '../../assets/assets';
+import { motion } from "framer-motion";
 
 export const SignIn = () => {
   const navigate = useNavigate();
@@ -11,43 +12,58 @@ export const SignIn = () => {
     <div className="signin-container">
       <img src={assets.puzzleImg} alt="puzzleImg" className="bg-image" />
 
-      <div className="signin-form">
+      <motion.div 
+        className="signin-form"
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
+        exit={{ x: "-100%" }}
+        transition={{ 
+          duration: 0.3,
+          ease: [0.43, 0.13, 0.23, 0.96] // Custom easing for smoother animation
+        }}
+      >
         <Box className="signin-box">
           <Typography variant="h2" className="main-title">
             Create Account
           </Typography>
 
           <Box className="name-fields">
-            <TextField 
-              placeholder="First Name" 
-              variant="outlined" 
-              className="signin-input name-input" 
+            <TextField
+            id='outlined-basic' 
+            label='First Name'
+            variant="outlined" 
+            className="signin-input name-input" 
             />
             <TextField 
-              placeholder="Last Name" 
-              variant="outlined" 
-              className="signin-input name-input" 
+            id='outlined-basic' 
+            label='Last Name'
+            variant="outlined" 
+            className="signin-input name-input" 
             />
           </Box>
 
           <TextField 
             fullWidth 
+            id='outlined-basic' 
+            label='Email'
             placeholder="Email" 
             variant="outlined" 
-            className="signin-input" 
+            className="signin-input email-input" 
           />
 
           <Box className="name-fields">
             <TextField 
-              placeholder="Password" 
-              type="password"
-              variant="outlined" 
-              className="signin-input name-input" 
+            id='outlined-basic' 
+            label='Password'
+            type="password"
+            variant="outlined" 
+            className="signin-input name-input" 
             />
             <TextField 
-              placeholder="Nick Name" 
-              variant="outlined" 
-              className="signin-input name-input" 
+            id='outlined-basic' 
+            label='Nick Name'
+            variant="outlined" 
+            className="signin-input name-input" 
             />
           </Box>
 
@@ -68,7 +84,7 @@ export const SignIn = () => {
             </Typography>
           </Box>
         </Box>
-      </div>
+      </motion.div>
     </div>
   )
 } 

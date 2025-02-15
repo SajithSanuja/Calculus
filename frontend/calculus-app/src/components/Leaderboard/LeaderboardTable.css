@@ -1,0 +1,213 @@
+.table-header {
+  font-weight: 600 !important;
+  color: #1a1a1a !important;
+  padding: 8px 12px !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1) !important;
+  background-color: #f8f9fa !important;
+  white-space: nowrap;
+  font-size: 0.9rem !important;
+  text-align: center !important;
+}
+
+.table-row {
+  height: 55px !important;
+  background-color: white !important;
+  margin-bottom: 4px !important;
+}
+
+.table-row td {
+  background-color: white !important;
+  border-bottom: 4px solid #f8f9fa !important;
+}
+
+.table-row:hover {
+  background-color: #f8f9fa !important;
+}
+
+.table-row:hover td {
+  background-color: #f8f9fa !important;
+}
+
+.rank-cell, .player-cell, .points-cell {
+  padding: 6px 12px !important;
+  font-size: 0.9rem !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.rank-1 {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.rank-2 {
+  background-color: #df52fc;
+  color: #000;
+}
+
+.rank-3 {
+  background-color: #cd7f32;
+  color: #fff;
+}
+
+.rank-other {
+  background-color: #e0e0e0;
+  color: #666;
+}
+
+/* Update these styles */
+.table-header .MuiTableSortLabel-root {
+  color: #1a1a1a !important;
+  font-weight: 600 !important;
+}
+
+/* Remove color change on active state for the text */
+.table-header .MuiTableSortLabel-root.Mui-active {
+  color: #1a1a1a !important;  /* Keep text color same as inactive state */
+}
+
+/* Only highlight the sort icon */
+.table-header .MuiTableSortLabel-root.Mui-active .MuiTableSortLabel-icon {
+  color: #00bcd4 !important;
+  opacity: 1;
+}
+
+.table-header .MuiTableSortLabel-icon {
+  font-size: 18px !important;
+  opacity: 0.5;  /* Make inactive icons slightly transparent */
+}
+
+/* Add hover effect only to the icon */
+.table-header .MuiTableSortLabel-root:hover {
+  color: #1a1a1a !important;  /* Keep text color unchanged on hover */
+}
+
+.table-header .MuiTableSortLabel-root:hover .MuiTableSortLabel-icon {
+  opacity: 0.8;  /* Slightly increase icon opacity on hover */
+}
+
+/* Add to existing styles */
+@media (max-width: 768px) {
+  .table-header {
+    padding: 12px 4px !important;
+  }
+  
+  .rank-cell, .player-cell, .points-cell {
+    padding: 8px 4px !important;
+  }
+  
+  /* Make table scrollable horizontally on small screens */
+  .MuiTableContainer-root {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .table-header {
+    padding: 6px 8px !important;
+    font-size: 0.8rem !important;
+    text-align: center !important;
+  }
+
+  .rank-cell, .player-cell, .points-cell {
+    padding: 6px 8px !important;
+    font-size: 0.8rem !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+
+  .rank {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    font-size: 0.75rem;
+  }
+
+  .rank-cell {
+    width: 15% !important;
+    text-align: center !important;
+    padding: 6px 4px !important;
+  }
+
+  .player-cell {
+    width: 55% !important;
+    padding: 6px 8px !important;
+  }
+
+  .points-cell {
+    width: 30% !important;
+    padding: 6px 8px !important;
+  }
+
+  /* Keep table header text and sort icons aligned */
+  .MuiTableSortLabel-root {
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center !important;
+  }
+
+  .MuiTableSortLabel-icon {
+    font-size: 14px !important;
+  }
+}
+
+/* Add/update these styles */
+.MuiTableContainer-root {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  .table-header {
+    padding: 16px 24px !important;
+  }
+  
+  .rank-cell, .player-cell, .points-cell {
+    padding: 8px 24px !important;
+  }
+  
+  .rank {
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Center sort labels */
+.MuiTableSortLabel-root {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Update the sort icon container */
+.MuiTableSortLabel-iconDirectionDesc,
+.MuiTableSortLabel-iconDirectionAsc {
+  margin-left: 4px !important;  /* Add consistent spacing */
+}
+
+/* Ensure the sort label text stays centered */
+.MuiTableSortLabel-root > .MuiTableSortLabel-icon {
+  position: absolute !important;
+  right: -20px !important;  /* Move sort icon out of the way */
+} 

@@ -1,0 +1,89 @@
+.instructions-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.instructions-title {
+  font-size: 1.2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.instructions-text {
+  font-size: 0.9rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.4 !important;
+}
+
+.example-section {
+  padding: 0.8rem;
+  margin: 0.8rem 0;
+  font-size: 0.9rem !important;
+}
+
+.example-title {
+  margin-bottom: 1rem !important;
+}
+
+.example-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resume-button {
+  background-color: #00bcd4 !important;
+  padding: 0.8rem !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+}
+
+.resume-button:hover {
+  background-color: #008c9e !important;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .instructions-card {
+    padding: 2rem;
+  }
+  
+  .instructions-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .instructions-text {
+    font-size: 1rem !important;
+    margin-bottom: 2rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .example-section {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 1rem !important;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .instructions-card {
+    padding: 1rem;
+  }
+  
+  .instructions-title {
+    font-size: 1.2rem !important;
+  }
+  
+  .instructions-text {
+    font-size: 0.9rem !important;
+  }
+  
+  .example-section {
+    padding: 0.8rem;
+  }
+} 

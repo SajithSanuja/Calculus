@@ -1,6 +1,8 @@
 .signin-container {
   display: flex;
   height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .signin-form {
@@ -9,10 +11,15 @@
   align-items: center;
   justify-content: center;
   background-color: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+  right: 0;
 }
 
 .bg-image {
   width: 60%;
+  position: relative;
+  z-index: 1;
 }
 
 .signin-box {
@@ -56,7 +63,6 @@
   border-radius: 8px !important;
   text-transform: none !important;
   font-size: 16px !important;
-  margin-top: 10px !important;
 }
 
 .signin-footer {

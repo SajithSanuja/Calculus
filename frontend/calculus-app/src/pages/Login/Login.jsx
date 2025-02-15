@@ -3,6 +3,7 @@ import { TextField, Button, Box, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { assets } from '../../assets/assets';
+import { motion } from "framer-motion";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -13,11 +14,18 @@ export const Login = () => {
 
   return (
     <div className="login-container">
-
       <img src={assets.puzzleImg} alt="puzzleImg" className="bg-image" />
 
-      <div className="login-form">
-
+      <motion.div 
+        className="login-form"
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
+        exit={{ x: "-100%" }}
+        transition={{ 
+          duration: 0.3,
+          ease: [0.43, 0.13, 0.23, 0.96] // Custom easing for smoother animation
+        }}
+      >
         <Box className="login-box">
           <Typography variant="h2" className="main-title">
             Welcome!
@@ -40,16 +48,17 @@ export const Login = () => {
             </Typography>
           </Box>
 
-          <TextField 
-            fullWidth 
-            placeholder="Email" 
-            variant="outlined" 
-            className="login-input" 
-          />
+              <TextField 
+                id='outlined-basic' 
+                label='Email'
+                placeholder="Email" 
+                variant="outlined" 
+                className="login-input" 
+              />
 
           <TextField 
-            fullWidth 
-            placeholder="Password" 
+            id='outlined-basic' 
+            label='Password'
             type="password" 
             variant="outlined" 
             className="login-input" 
@@ -63,7 +72,7 @@ export const Login = () => {
             Forget password ?
           </Typography>
         </Box>
-      </div>
+      </motion.div>
     </div>
   )
 }

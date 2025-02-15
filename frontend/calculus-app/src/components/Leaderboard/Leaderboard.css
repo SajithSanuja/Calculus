@@ -1,0 +1,22 @@
+.leaderboard-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.show-all-button {
+  color: #00bcd4 !important;
+  text-transform: none !important;
+}
+
+.leaderboard-title {
+  font-weight: 500 !important;
+} 

@@ -1,0 +1,28 @@
+.points-history-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.points-history-title {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .points-history-card {
+    padding: 2rem;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .points-history-card {
+    padding: 1rem;
+  }
+  
+  .points-history-title {
+    font-size: 1.2rem !important;
+  }
+} 
