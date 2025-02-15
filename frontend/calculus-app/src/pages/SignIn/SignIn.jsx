@@ -10,16 +10,17 @@ export const SignIn = () => {
 
   return (
     <div className="signin-container">
-      <img src={assets.puzzleImg} alt="puzzleImg" className="bg-image" />
+      <img src={assets.puzzleImg} alt="puzzleImg" className="bg-image desktop-bg" />
+      <img src={assets.mobileBg} alt="mobileBg" className="bg-image mobile-bg" />
 
       <motion.div 
-        className="signin-form"
+        className="signin-form-container"
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "-100%" }}
         transition={{ 
           duration: 0.3,
-          ease: [0.43, 0.13, 0.23, 0.96] // Custom easing for smoother animation
+          ease: [0.43, 0.13, 0.23, 0.96]
         }}
       >
         <Box className="signin-box">
@@ -29,41 +30,39 @@ export const SignIn = () => {
 
           <Box className="name-fields">
             <TextField
-            id='outlined-basic' 
-            label='First Name'
-            variant="outlined" 
-            className="signin-input name-input" 
+              id='outlined-basic' 
+              label='First Name'
+              variant="outlined" 
+              className="signin-input name-input" 
             />
             <TextField 
-            id='outlined-basic' 
-            label='Last Name'
-            variant="outlined" 
-            className="signin-input name-input" 
+              id='outlined-basic' 
+              label='Last Name'
+              variant="outlined" 
+              className="signin-input name-input" 
             />
           </Box>
 
           <TextField 
-            fullWidth 
             id='outlined-basic' 
             label='Email'
-            placeholder="Email" 
             variant="outlined" 
             className="signin-input email-input" 
           />
 
           <Box className="name-fields">
             <TextField 
-            id='outlined-basic' 
-            label='Password'
-            type="password"
-            variant="outlined" 
-            className="signin-input name-input" 
+              id='outlined-basic' 
+              label='Password'
+              type="password"
+              variant="outlined" 
+              className="signin-input name-input" 
             />
             <TextField 
-            id='outlined-basic' 
-            label='Nick Name'
-            variant="outlined" 
-            className="signin-input name-input" 
+              id='outlined-basic' 
+              label='Nick Name'
+              variant="outlined" 
+              className="signin-input name-input" 
             />
           </Box>
 

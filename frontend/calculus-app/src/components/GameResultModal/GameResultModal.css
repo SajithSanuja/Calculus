@@ -1,0 +1,59 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-width: 300px;
+}
+
+.result-icon {
+  font-size: 3rem !important;
+  margin-bottom: 0.5rem;
+}
+
+.result-icon.success {
+  color: #4caf50;
+}
+
+.result-icon.error {
+  color: #f44336;
+}
+
+.modal-title {
+  text-align: center;
+  font-weight: 600 !important;
+}
+
+.modal-points {
+  color: #666;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.next-button {
+  background-color: #1a1a1a !important;
+}
+
+.exit-button {
+  background-color: #666 !important;
+} 

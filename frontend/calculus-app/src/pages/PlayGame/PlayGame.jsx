@@ -5,12 +5,17 @@ import { Timer } from '../../components/Timer/Timer';
 import { GameBoard } from '../../components/GameBoard/GameBoard';
 import { PageTransition } from '../../components/PageTransition';
 import './PlayGame.css';
+import { useNavigate } from 'react-router-dom';
+import { GameResultModal } from '../../components/GameResultModal/GameResultModal';
 
 export const PlayGame = () => {
   const [gameData, setGameData] = useState(null); // Stores game data (image URL and solution)
   const [answer, setAnswer] = useState(''); // Stores the user's answer
   const [timeLeft, setTimeLeft] = useState(35); // 35 seconds timer
   const [isLoading, setIsLoading] = useState(true); // Tracks loading state
+  const [showModal, setShowModal] = useState(false);
+  const [gameResult, setGameResult] = useState(null);
+  const navigate = useNavigate();
 
   const isFetched = useRef(false); // Tracks if API was already called
 
@@ -47,11 +52,30 @@ export const PlayGame = () => {
   const handleSubmit = async () => {
     if (gameData && answer.trim()) {
       const isCorrect = parseInt(answer) === gameData.solution;
-      console.log('Answer is:', isCorrect ? 'correct' : 'incorrect'); // Log the result
-      await fetchNewGame(); // Fetch a new game
-      setAnswer(''); // Reset the answer input
+      setGameResult(isCorrect ? 'correct' : 'wrong');
+      setShowModal(true);
     }
   };
+
+  // Add these handlers
+  const handleNext = async () => {
+    setShowModal(false);
+    await fetchNewGame();
+    setAnswer('');
+    setTimeLeft(60); // Reset timer
+  };
+
+  const handleExit = () => {
+    navigate('/dashboard');
+  };
+
+  // Add timeout handler
+  useEffect(() => {
+    if (timeLeft === 0) {
+      setGameResult('timeout');
+      setShowModal(true);
+    }
+  }, [timeLeft]);
 
   return (
     <div className="play-game-page">
@@ -63,7 +87,7 @@ export const PlayGame = () => {
           {/* Game Header */}
           <Box className="game-header">
             <Typography variant="h6" className="random-number">
-              Random Number: {gameData?.question || '----'}
+              Random Number: 
             </Typography>
             {/* Timer Component */}
             <Timer timeLeft={timeLeft} setTimeLeft={setTimeLeft} />
@@ -97,6 +121,14 @@ export const PlayGame = () => {
           </Box>
         </Box>
       </div>
+
+      <GameResultModal 
+        isOpen={showModal}
+        result={gameResult}
+        points={1}  // Always deduct/add 1 point for any result
+        onNext={handleNext}
+        onExit={handleExit}
+      />
     </div>
   );
 };

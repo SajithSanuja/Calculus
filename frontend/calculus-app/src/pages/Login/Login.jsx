@@ -14,10 +14,11 @@ export const Login = () => {
 
   return (
     <div className="login-container">
-      <img src={assets.puzzleImg} alt="puzzleImg" className="bg-image" />
+      <img src={assets.puzzleImg} alt="puzzleImg" className="bg-image desktop-bg" />
+      <img src={assets.mobileBg} alt="mobileBg" className="bg-image mobile-bg" />
 
       <motion.div 
-        className="login-form"
+        className="login-form-container"
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "-100%" }}
