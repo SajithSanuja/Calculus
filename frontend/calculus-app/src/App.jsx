@@ -4,6 +4,7 @@ import { SignIn } from './pages/SignIn/SignIn';
 import { AnimatePresence } from 'framer-motion';
 import { Dashboard } from './pages/Dashboard/Dashboard';
 import { LeaderboardPage } from './pages/LeaderboardPage/LeaderboardPage';
+import { PlayGame } from './pages/PlayGame/PlayGame';
 
 export const App = () => {
   return (
@@ -23,6 +24,7 @@ const AnimatedRoutes = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/leaderboard" element={<LeaderboardPage />} />
+        <Route path="/play" element={<PlayGame />} />
       </Routes>
     </AnimatePresence>
   );

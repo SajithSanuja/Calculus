@@ -1,8 +1,15 @@
 import React from 'react';
 import { Typography, Box, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import './GameInstructions.css';
 
 export const GameInstructions = () => {
+  const navigate = useNavigate();
+
+  const handleResume = () => {
+    navigate('/play');
+  };
+
   return (
     <Box className="instructions-card">
       <Typography variant="h5" className="instructions-title">
@@ -30,6 +37,7 @@ export const GameInstructions = () => {
         variant="contained" 
         fullWidth 
         className="resume-button"
+        onClick={handleResume}
       >
         Resume
       </Button>

@@ -1,0 +1,75 @@
+.play-game-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+.play-game-content {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.game-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.random-number {
+  font-weight: 500 !important;
+}
+
+.answer-section {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.answer-input {
+  width: 200px;
+}
+
+.submit-button {
+  background-color: #1a1a1a !important;
+  color: white !important;
+  padding: 12px 24px !important;
+  text-transform: none !important;
+}
+
+@media (max-width: 600px) {
+  .play-game-content {
+    padding: 0.5rem;
+  }
+
+  .game-container {
+    padding: 1rem;
+  }
+
+  .game-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .answer-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .answer-input {
+    width: 100%;
+  }
+} 
